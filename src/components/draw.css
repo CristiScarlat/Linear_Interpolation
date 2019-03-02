@@ -1,0 +1,18 @@
+.draw-body {
+    display: flex;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 1rem;
+}
+
+button {
+    margin: 1rem;
+    min-width: 6rem;
+    min-height: 3rem;
+}
