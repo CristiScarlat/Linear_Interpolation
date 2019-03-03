@@ -76,7 +76,10 @@ export default class Draw extends React.Component {
         pointsArr.forEach((point, index) => {
             arr.push(point);
             if (index < pointsArr.length - 1) {
-                arr.push({ x: (point.x + pointsArr[index + 1].x) / 2, y: (point.y + pointsArr[index + 1].y) / 2 });
+                // arithmetic mean
+                // arr.push({ x: (point.x + pointsArr[index + 1].x) / 2, y: (point.y + pointsArr[index + 1].y) / 2 });
+                // geometric mean
+                arr.push({x: Math.sqrt(point.x * pointsArr[index + 1].x), y: Math.sqrt(point.y * pointsArr[index + 1].y)});
             }
         })
         return arr;
