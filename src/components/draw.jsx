@@ -41,7 +41,7 @@ export default class Draw extends React.Component {
 
     canvasClear = () => {
         const context = this.canvas.getContext('2d');
-        context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        context.clearRect(0, 0, this.canvas.width, this.canvas.height);       
     }
 
     canvasUpdate = (points, interpolation) => {
@@ -93,13 +93,19 @@ export default class Draw extends React.Component {
         });
     }
 
+    analizeData = () => {
+        this.draw = false; 
+        this.index = 0; 
+        console.log(this.points)
+    }
+
     render() {
         console.log("render")
         return (
             <div className="draw-body">
                 <canvas
                     onMouseDown={() => { this.draw = true }}
-                    onMouseUp={() => { this.draw = false; this.index = 0; }}
+                    onMouseUp={() => this.analizeData()}
                     onMouseMove={e => this.savePoints(e)}
                     onTouchStart={() => { this.draw = true }}
                     onTouchCancel={() => { this.draw = true }}
