@@ -117,7 +117,7 @@ export default class Draw extends React.Component {
                     style={{ border: '2px dashed black' }} />
                 <div className="menu">
                     <label htmlFor="enable_button">Interpolation</label>
-                    <button id="enable_button" onClick={this.enableInterpolation}>{this.state.useInterpolation ? "Enabled" : "Disabled"}</button>
+                    <button id="enable_button" onClick={this.enableInterpolation}>{this.state.useInterpolation ? "ON" : "OFF"}</button>
                     <hr />
                     <button onClick={this.canvasClear}>Clear</button>
                 </div>
