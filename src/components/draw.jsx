@@ -17,7 +17,6 @@ export default class Draw extends React.Component {
 
     componentDidMount() {
         this.canvas = this.refs.canvas;
-
     }
 
     savePoints = (e) => {
@@ -56,7 +55,7 @@ export default class Draw extends React.Component {
         samples.forEach((coordinates) => {
             context.beginPath();
             //context.lineWidth = "1";
-            context.strokeStyle = "black";
+            context.strokeStyle = this.state.useInterpolation ? "red" : "black";
             context.rect(coordinates.x, coordinates.y, 1, 1);
             context.stroke();
         });

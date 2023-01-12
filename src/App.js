@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-       <Draw useInterpolation={true}/>
+        <Draw useInterpolation={true} />
       </div>
     );
   }
